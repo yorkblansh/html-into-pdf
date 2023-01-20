@@ -1,0 +1,60 @@
+{
+	"name": "html-into-pdf",
+	"version": "0.1.0",
+	"description": "html-into-pdf",
+	"main": "lib/index.js",
+	"scripts": {
+		"serve": "serve -p 6010 docs/html",
+		"test": "jest",
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"prettier": "prettier --write src/* test/* examples/* lib/*",
+		"docs": "ts-docs",
+		"linux_docs": "sudo rm docs/html/ -R; yarn run docs;",
+		"linux_build": "sudo rm lib/ -R; yarn run build; yarn run prettier"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yorkblansh/html-into-pdf.git"
+	},
+	"email": "yorkblansh@yandex.com",
+	"author": "yorkblansh",
+	"keywords": [
+		"html",
+		"to",
+		"pdf",
+		"html-into-pdf",
+		"html2pdf",
+		"html to pdf"
+	],
+	"maintainers": [
+		"yorkblansh"
+	],
+	"license": "MIT",
+	"devDependencies": {
+		"@ts-docs/default-docs-structure": "^0.4.3",
+		"@ts-docs/ts-docs": "^0.4.3",
+		"@types/jest": "^28.1.0",
+		"@types/node": "^17.0.33",
+		"@typescript-eslint/eslint-plugin": "^5.23.0",
+		"@typescript-eslint/parser": "^5.23.0",
+		"eslint": "^8.17.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jest": "^26.4.6",
+		"expect-type": "^0.13.0",
+		"jest": "^28.1.0",
+		"prettier": "^2.6.2",
+		"serve": "^13.0.2",
+		"ts-jest": "^28.0.4",
+		"ttypescript": "^1.5.13",
+		"typescript": "^4.7.3",
+		"typescript-transform-paths": "^3.3.1"
+	},
+	"type": "commonjs",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"handlebars": "^4.7.7",
+		"puppeteer": "^19.5.2"
+	}
+}
