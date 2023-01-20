@@ -14,30 +14,9 @@
 			"*": ["*"]
 		},
 		"noUnusedLocals": false,
-		"noUnusedParameters": false,
-		"plugins": [
-			{ "transform": "typescript-transform-paths" },
-			{ "transform": "typescript-transform-paths", "afterDeclarations": true }
-		]
+		"noUnusedParameters": false
 	},
 
-	"tsdocsOptions": {
-		"entryPoints": ["./src/ts_docs_index.ts"],
-		"customPages": "./docs/md",
-		"name": "gitflic-api",
-		"changelog": true,
-		"out": "./docs/html",
-		"passthroughModules": [
-			"interfaces",
-			"project",
-			"user",
-			"typings",
-			"Project_API",
-			"entities",
-			"services",
-			"utils"
-		]
-	},
 	"include": ["src"],
 	"exclude": ["node_modules", "**/__tests__/*"]
 }
