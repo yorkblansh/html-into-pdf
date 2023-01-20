@@ -1,0 +1,43 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"eslint-config-prettier",
+		"plugin:import/recommended",
+		"plugin:import/typescript",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "import", "jest"],
+
+	"rules": {
+		"curly": "off",
+		"ordered-imports": false,
+		"interface-name": [true, "never-prefix"],
+		"import/no-unresolved": "error",
+		"no-unused-vars": "error",
+		"@typescript-eslint/no-unused-vars": "error"
+
+		// "jest/expect-expect": [
+		// 	"error",
+		// 	{
+		// 		"assertFunctionNames": ["expect", "expectTypeOf"]
+		// 	}
+		// ]
+	},
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"tsconfigRootDir": "./"
+	}
+}
