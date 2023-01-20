@@ -1,0 +1,43 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"target": "ESNext",
+		"module": "commonjs",
+		"declaration": true,
+		"outDir": "./lib",
+		"strict": true,
+		"sourceMap": true,
+		"moduleResolution": "node",
+		"baseUrl": "src",
+		"paths": {
+			"*": ["*"]
+		},
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"plugins": [
+			{ "transform": "typescript-transform-paths" },
+			{ "transform": "typescript-transform-paths", "afterDeclarations": true }
+		]
+	},
+
+	"tsdocsOptions": {
+		"entryPoints": ["./src/ts_docs_index.ts"],
+		"customPages": "./docs/md",
+		"name": "gitflic-api",
+		"changelog": true,
+		"out": "./docs/html",
+		"passthroughModules": [
+			"interfaces",
+			"project",
+			"user",
+			"typings",
+			"Project_API",
+			"entities",
+			"services",
+			"utils"
+		]
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*"]
+}
