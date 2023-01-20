@@ -1,0 +1,9 @@
+docs/
+src/
+node_modules/
+examples/
+test/
+*.lock
+.git/
+.vscode/
+test/
